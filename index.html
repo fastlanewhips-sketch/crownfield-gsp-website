@@ -54,6 +54,10 @@ ul{padding-left:20px}li{margin:7px 0}
 .site-footer{background:#06170f;color:#dce2d8;text-align:center;padding:24px;font:12px Arial,sans-serif}
 @media(max-width:800px){.nav{padding:18px 24px 20px;justify-content:center}.brand{width:100%;justify-content:flex-start}.brand-logo{width:112px;height:112px}.menu{display:none}nav{gap:14px 16px}.contact-nav{margin-top:4px}.hero{padding:36px 4% 48px}.hero-photo{aspect-ratio:1.4/1}.hero-copy{margin-top:48px}.two,.parent{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.trio,.quotes{grid-template-columns:1fr}.hero{padding-bottom:50px}section{padding:48px 16px}}
 @media(max-width:480px){.topline{font-size:14px;padding:15px 8px}.brand-logo{width:112px;height:112px}.brand strong{font-size:28px}.brand small{font-size:16px}nav{gap:13px 15px}nav a{font-size:16px}.hero{padding:34px 4% 50px}.hero-photo{aspect-ratio:1.4/1;min-height:280px}.hero-copy{margin-top:52px}.eyebrow{font-size:14px}h1{font-size:clamp(42px,10vw,62px);margin-top:22px}.hero p{font-size:17px}.btn.outline{margin:10px 0 0}.cards{grid-template-columns:1fr}}
+
+.puppy-gallery{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#e9dfc9}
+.puppy-gallery img{width:100%;height:150px;object-fit:cover}
+@media(max-width:480px){.puppy-gallery img{height:130px}}
 </style>
 </head>
 <body>
@@ -72,11 +76,34 @@ ul{padding-left:20px}li{margin:7px 0}
 <a class="btn" href="#puppies">View Available Puppies</a></div>
 </section>
 <section id="about"><div class="wrap two"><div class="frame"><div class="placeholder">ADD YOUR CROWN FIELD GSP HERO / KENNEL PHOTO HERE</div></div><div><div class="eyebrow">Welcome to Crown Field</div><h2>Raised with care. Ready for a lifetime of companionship.</h2><p>We believe every puppy deserves a thoughtful start and a loving, prepared home. Our goal is to help families understand this energetic, affectionate, intelligent breed before welcoming a puppy.</p><ul><li>Friendly, people-oriented companions</li><li>Curious, bright, and eager to learn</li><li>Best suited to active homes and daily enrichment</li></ul></div></div></section>
-<section class="alt" id="puppies"><div class="wrap"><div class="heading"><div class="eyebrow">Current availability</div><h2>Available Puppies</h2><p>Six featured puppies. Each is listed as 10 weeks old and $750. Replace each labeled photo area with that puppy’s single photo before publishing.</p></div>
+<section class="alt" id="puppies"><div class="wrap"><div class="heading"><div class="eyebrow">Current availability</div><h2>Available Puppies</h2><p>Available puppies are listed with their age, price, description, and photos. Rosie and Oliver each have a dedicated four-photo gallery.</p></div>
 <div class="cards">
 <article class="card"><div class="puppy-photo"><div class="placeholder">DUKE — ADD ONE PUPPY PHOTO</div></div><div class="card-body"><h3>Duke</h3><div class="tags"><span>Male</span><span>10 weeks old</span></div><div class="price">$750</div><p>Duke is a confident, curious little explorer who enjoys discovering new sights and sounds. He has a playful spirit and loves being included in family activities. With patient guidance and daily enrichment, he can grow into a loyal companion.</p><a class="textlink" href="#contact">Ask about Duke</a></div></article>
 <article class="card"><div class="puppy-photo"><div class="placeholder">COOPER — ADD ONE PUPPY PHOTO</div></div><div class="card-body"><h3>Cooper</h3><div class="tags"><span>Male</span><span>10 weeks old</span></div><div class="price">$750</div><p>Cooper is an affectionate, upbeat puppy with a playful personality. He enjoys interactive play and exploring, then settles in for gentle attention. He will benefit from positive training, socialization, and an active routine.</p><a class="textlink" href="#contact">Ask about Cooper</a></div></article>
 <article class="card"><div class="puppy-photo"><div class="placeholder">HUNTER — ADD ONE PUPPY PHOTO</div></div><div class="card-body"><h3>Hunter</h3><div class="tags"><span>Male</span><span>10 weeks old</span></div><div class="price">$750</div><p>Hunter is an alert, adventurous puppy who loves sniffing around and engaging with the world. He is lively and curious, and may thrive with a family that enjoys outdoor activities and kind, consistent training.</p><a class="textlink" href="#contact">Ask about Hunter</a></div></article>
+
+<article class="card">
+  <div class="puppy-gallery">
+    <img src="rosie-1.jpg" alt="Rosie photo 1">
+    <img src="rosie-2.jpg" alt="Rosie photo 2">
+    <img src="rosie-3.jpg" alt="Rosie photo 3">
+    <img src="rosie-4.jpg" alt="Rosie photo 4">
+  </div>
+  <div class="card-body"><h3>Rosie</h3><div class="tags"><span>Female</span><span>10 weeks old</span></div><div class="price">$750</div>
+  <p>Rosie is a cheerful, curious puppy who enjoys gentle play and exploring new surroundings. She may thrive with patient guidance, positive training, and plenty of companionship.</p>
+  <a class="textlink" href="#contact">Ask about Rosie</a></div>
+</article>
+<article class="card">
+  <div class="puppy-gallery">
+    <img src="oliver-1.jpg" alt="Oliver photo 1">
+    <img src="oliver-2.jpg" alt="Oliver photo 2">
+    <img src="oliver-3.jpg" alt="Oliver photo 3">
+    <img src="oliver-4.jpg" alt="Oliver photo 4">
+  </div>
+  <div class="card-body"><h3>Oliver</h3><div class="tags"><span>Male</span><span>10 weeks old</span></div><div class="price">$750</div>
+  <p>Oliver is a bright, playful puppy with an adventurous streak. He enjoys exploring and engaging with people, and will benefit from kind, consistent training and an active, loving home.</p>
+  <a class="textlink" href="#contact">Ask about Oliver</a></div>
+</article>
 <article class="card"><div class="puppy-photo"><div class="placeholder">LUNA — ADD ONE PUPPY PHOTO</div></div><div class="card-body"><h3>Luna</h3><div class="tags"><span>Female</span><span>10 weeks old</span></div><div class="price">$750</div><p>Luna is a sweet-natured, bright puppy who enjoys gentle affection and playful discovery. She is curious and loving, and will enjoy short, positive training sessions and plenty of companionship.</p><a class="textlink" href="#contact">Ask about Luna</a></div></article>
 <article class="card"><div class="puppy-photo"><div class="placeholder">WILLOW — ADD ONE PUPPY PHOTO</div></div><div class="card-body"><h3>Willow</h3><div class="tags"><span>Female</span><span>10 weeks old</span></div><div class="price">$750</div><p>Willow is an inquisitive, cheerful puppy who enjoys playtime and exploring at her own pace. She has a gentle, people-focused side and will flourish with a caring family, structure, and positive encouragement.</p><a class="textlink" href="#contact">Ask about Willow</a></div></article>
 <article class="card"><div class="puppy-photo"><div class="placeholder">DAISY — ADD ONE PUPPY PHOTO</div></div><div class="card-body"><h3>Daisy</h3><div class="tags"><span>Female</span><span>10 weeks old</span></div><div class="price">$750</div><p>Daisy is a lively, affectionate puppy with a playful streak and a curious nose. She enjoys people and new discoveries. Regular exercise, thoughtful socialization, and reward-based training will help her develop into a wonderful companion.</p><a class="textlink" href="#contact">Ask about Daisy</a></div></article>
