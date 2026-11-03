@@ -4,108 +4,468 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#173b2b">
-<meta name="description" content="Crown Field GSP — German Shorthaired Pointer puppies, parent dogs, and breed information.">
+
+<meta name="description" content="Crown Field GSP — German Shorthaired Pointer puppies, parents, and breed information.">
+
 <title>Crown Field GSP | German Shorthaired Pointers</title>
 
 <style>
-:root{--green:#173b2b;--deep:#10291e;--gold:#c7a45b;--cream:#f7f3e9;--paper:#fffdf8;--ink:#243128;--muted:#68736a;--line:#e6dfd0;--shadow:0 12px 32px #10291e18}
+:root{
+  --green:#173b2b;
+  --deep:#10291e;
+  --gold:#c7a45b;
+  --cream:#f7f3e9;
+  --paper:#fffdf8;
+  --ink:#243128;
+  --muted:#68736a;
+  --line:#e6dfd0;
+  --shadow:0 12px 32px #10291e18;
+}
+
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Georgia,'Times New Roman',serif;overflow-x:hidden}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.65 Georgia,'Times New Roman',serif;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
 a{color:inherit}
-img{max-width:100%;display:block}
 
-.topline{background:var(--deep);color:#f8f1df;text-align:center;padding:8px;font:11px Arial,sans-serif;letter-spacing:.12em}
-header{background:var(--green);color:var(--cream);border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:5}
-.nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.crest{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:21px}
-.brand strong{font-size:20px;font-weight:normal;line-height:1.1}
-.brand small{display:block;color:#e0c98f;font:9px Arial,sans-serif;letter-spacing:.18em;margin-top:5px}
-nav{display:flex;gap:18px;font:12px Arial,sans-serif}
-nav a{text-decoration:none;color:#f7f3e9}
+.topline{
+  background:var(--deep);
+  color:#f8f1df;
+  text-align:center;
+  padding:8px;
+  font:11px Arial,sans-serif;
+  letter-spacing:.12em;
+}
+
+header{
+  background:var(--green);
+  color:var(--cream);
+  border-bottom:2px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.nav{
+  max-width:1150px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.crest{
+  width:44px;
+  height:44px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--gold);
+  font-size:21px;
+}
+
+.brand strong{
+  font-size:20px;
+  font-weight:normal;
+  line-height:1.1;
+}
+
+.brand small{
+  display:block;
+  color:#e0c98f;
+  font:9px Arial,sans-serif;
+  letter-spacing:.18em;
+  margin-top:5px;
+}
+
+nav{
+  display:flex;
+  gap:18px;
+  font:12px Arial,sans-serif;
+}
+
+nav a{
+  text-decoration:none;
+  color:#f7f3e9;
+}
+
 nav a:hover{color:var(--gold)}
-.menu{display:none;background:transparent;color:white;border:1px solid var(--gold);padding:8px}
 
-.hero{background:linear-gradient(120deg,#10291ef2,#173b2bd9),#173b2b;color:var(--cream);text-align:center;padding:75px 20px 82px}
-.eyebrow{color:var(--gold);font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
-h1{font-weight:normal;font-size:clamp(34px,6vw,60px);line-height:1.1;margin:18px auto;max-width:800px}
-.hero p{max-width:650px;margin:0 auto 25px;color:#e8e9df;font-size:17px}
-.btn{display:inline-block;background:var(--gold);color:var(--deep);padding:12px 20px;text-decoration:none;font:bold 12px Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;border-radius:2px}
-.btn.outline{background:transparent;color:var(--cream);border:1px solid var(--gold);margin-left:8px}
+.menu{
+  display:none;
+  background:transparent;
+  color:white;
+  border:1px solid var(--gold);
+  padding:8px;
+  cursor:pointer;
+}
+
+.hero{
+  background:linear-gradient(120deg,#10291ef2,#173b2bd9),#173b2b;
+  color:var(--cream);
+  text-align:center;
+  padding:75px 20px 82px;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font:11px Arial,sans-serif;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+h1{
+  font-weight:normal;
+  font-size:clamp(34px,6vw,60px);
+  line-height:1.1;
+  margin:18px auto;
+  max-width:800px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:0 auto 25px;
+  color:#e8e9df;
+  font-size:17px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--deep);
+  padding:12px 20px;
+  text-decoration:none;
+  font:bold 12px Arial,sans-serif;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  border-radius:2px;
+  border:none;
+  cursor:pointer;
+}
+
+.btn.outline{
+  background:transparent;
+  color:var(--cream);
+  border:1px solid var(--gold);
+  margin-left:8px;
+}
 
 section{padding:62px 20px}
+
 .alt{background:var(--cream)}
-.wrap{max-width:1120px;margin:auto}
-.heading{text-align:center;max-width:720px;margin:0 auto 34px}
-.heading h2,h2{font-size:clamp(28px,4vw,42px);line-height:1.2;font-weight:normal;color:var(--green);margin:10px 0}
+
+.wrap{
+  max-width:1120px;
+  margin:auto;
+}
+
+.heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 34px;
+}
+
+.heading h2,
+h2{
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.2;
+  font-weight:normal;
+  color:var(--green);
+  margin:10px 0;
+}
+
 .heading p{color:var(--muted)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-.frame{padding:8px;border:1px solid var(--gold);background:white;box-shadow:var(--shadow)}
-.frame img{width:100%;height:auto;object-fit:cover}
-ul{padding-left:20px}
-li{margin:7px 0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
-.puppy-photo{aspect-ratio:4/3;overflow:hidden;background:#e8e3d8}
-.puppy-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:center;
+}
+
+.frame{
+  padding:8px;
+  border:1px solid var(--gold);
+  background:white;
+  box-shadow:var(--shadow);
+}
+
+.frame img{
+  width:100%;
+  object-fit:cover;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.puppy-photo{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#e8e3d8;
+}
+
+.puppy-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
 .card-body{padding:20px}
-.card h3{font-weight:normal;color:var(--green);font-size:24px;margin:0 0 6px}
-.tags{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}
-.tags span{background:#f1eee5;color:var(--green);padding:5px 8px;font:11px Arial,sans-serif}
-.price{font-size:20px;color:#9a742d;margin:8px 0}
-.card p{font-size:14px;color:var(--muted)}
-.textlink{font:bold 11px Arial,sans-serif;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px;color:var(--green)}
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tile{padding:22px;border:1px solid var(--line);background:white}
-.tile h3{font-weight:normal;color:var(--green);margin-top:0}
-.parent-gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.parent-gallery img{width:100%;height:100%;max-height:520px;object-fit:cover;border:1px solid var(--gold);padding:6px;background:white;box-shadow:var(--shadow)}
 
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-blockquote{margin:0;padding:22px;background:white;border:1px solid var(--line);color:var(--muted);font-size:14px}
-blockquote footer{margin-top:12px;color:var(--green);font:bold 11px Arial,sans-serif}
+.card h3{
+  font-weight:normal;
+  color:var(--green);
+  font-size:24px;
+  margin:0 0 6px;
+}
 
-.contact{background:var(--green);color:var(--cream);text-align:center;border:1px solid var(--gold);padding:35px}
+.tags{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin:10px 0;
+}
+
+.tags span{
+  background:#f1eee5;
+  color:var(--green);
+  padding:5px 8px;
+  font:11px Arial,sans-serif;
+}
+
+.price{
+  font-size:20px;
+  color:#9a742d;
+  margin:8px 0;
+}
+
+.card p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.textlink{
+  font:bold 11px Arial,sans-serif;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:3px;
+  color:var(--green);
+}
+
+.checkout{
+  display:block;
+  text-align:center;
+  margin-top:18px;
+  background:var(--green);
+  color:white;
+  padding:12px;
+  font:bold 12px Arial,sans-serif;
+  text-decoration:none;
+  border-radius:3px;
+}
+
+.checkout:hover{
+  background:var(--deep);
+}
+
+.trio{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.tile{
+  padding:22px;
+  border:1px solid var(--line);
+  background:white;
+}
+
+.tile h3{
+  font-weight:normal;
+  color:var(--green);
+  margin-top:0;
+}
+
+.parent-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.parent-gallery img{
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+  border:1px solid var(--gold);
+  padding:6px;
+  background:white;
+  box-shadow:var(--shadow);
+}
+
+.quotes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+blockquote{
+  margin:0;
+  padding:22px;
+  background:white;
+  border:1px solid var(--line);
+  color:var(--muted);
+  font-size:14px;
+}
+
+blockquote footer{
+  margin-top:12px;
+  color:var(--green);
+  font:bold 11px Arial,sans-serif;
+}
+
+.contact{
+  background:var(--green);
+  color:var(--cream);
+  text-align:center;
+  border:1px solid var(--gold);
+  padding:35px;
+}
+
 .contact h2{color:var(--cream)}
+
 .contact p{color:#e0e5dc}
-.site-footer{background:var(--deep);color:#dce2d8;text-align:center;padding:24px;font:12px Arial,sans-serif}
+
+.site-footer{
+  background:var(--deep);
+  color:#dce2d8;
+  text-align:center;
+  padding:24px;
+  font:12px Arial,sans-serif;
+}
+
+.image-fallback{
+  display:none;
+  width:100%;
+  height:100%;
+  min-height:220px;
+  background:#e8e3d8;
+  color:var(--green);
+  text-align:center;
+  padding:35px 15px;
+  font:14px Arial,sans-serif;
+  align-items:center;
+  justify-content:center;
+}
 
 @media(max-width:800px){
-.nav{padding:12px 15px}
-.menu{display:block}
-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--deep);padding:18px;flex-direction:column;gap:14px}
-nav.show{display:flex}
-.two{grid-template-columns:1fr}
-.cards{grid-template-columns:repeat(2,1fr)}
-.trio,.quotes{grid-template-columns:1fr}
-.parent-gallery{grid-template-columns:1fr 1fr}
-.hero{padding:58px 18px}
-section{padding:48px 16px}
+
+  .nav{padding:12px 15px}
+
+  .menu{display:block}
+
+  nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--deep);
+    padding:18px;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  nav.show{display:flex}
+
+  .two{grid-template-columns:1fr}
+
+  .cards{grid-template-columns:repeat(2,1fr)}
+
+  .trio,.quotes{grid-template-columns:1fr}
+
+  .parent-gallery{grid-template-columns:1fr 1fr}
+
+  .hero{padding:58px 18px}
+
+  section{padding:48px 16px}
 }
+
 @media(max-width:480px){
-.cards{grid-template-columns:1fr}
-.brand strong{font-size:17px}
-.crest{width:40px;height:40px}
-.btn.outline{margin:10px 0 0}
-.parent-gallery{grid-template-columns:1fr}
+
+  .cards{grid-template-columns:1fr}
+
+  .brand strong{font-size:17px}
+
+  .crest{
+    width:40px;
+    height:40px;
+  }
+
+  .btn.outline{margin:10px 0 0}
+
+  .parent-gallery{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topline">CROWN FIELD GSP · GERMAN SHORTHAIRED POINTERS</div>
+<div class="topline">
+CROWN FIELD GSP · GERMAN SHORTHAIRED POINTERS
+</div>
 
 <header>
 <div class="nav">
 
 <a class="brand" href="#home">
 <span class="crest">♔</span>
-<strong>Crown Field GSP<small>QUALITY · CARE · COMPANIONSHIP</small></strong>
+<strong>
+Crown Field GSP
+<small>QUALITY · CARE · COMPANIONSHIP</small>
+</strong>
 </a>
 
-<button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('show')">MENU</button>
+<button class="menu" aria-label="Toggle navigation">
+MENU
+</button>
 
 <nav>
 <a href="#about">About</a>
@@ -122,138 +482,370 @@ section{padding:48px 16px}
 
 <main>
 
+<!-- HOMEPAGE -->
+
 <section class="hero" id="home">
-<div class="eyebrow">A devoted companion for an active life</div>
-<h1>Meet Your Next<br>Four-Legged Adventure</h1>
-<p>Discover the intelligence, affectionate nature, and sporting spirit of the German Shorthaired Pointer at Crown Field GSP.</p>
+
+<div class="eyebrow">
+A devoted companion for an active life
+</div>
+
+<h1>
+Meet Your Next<br>
+Four-Legged Adventure
+</h1>
+
+<p>
+Discover the intelligence, affectionate nature, and sporting spirit of the German Shorthaired Pointer at Crown Field GSP.
+</p>
+
 <a class="btn" href="#puppies">Meet Our Puppies</a>
+
 <a class="btn outline" href="#contact">Get in Touch</a>
+
 </section>
 
+<!-- ABOUT -->
+
 <section id="about">
+
 <div class="wrap two">
+
 <div class="frame">
-<img src="images/parents-dax-july-1.jpg" alt="Crown Field German Shorthaired Pointer parent dogs Dax and July" loading="lazy">
+<img
+src="images/parents-dax-july-1.jpg"
+alt="Crown Field German Shorthaired Pointer parents Dax and July"
+loading="eager">
 </div>
+
 <div>
+
 <div class="eyebrow">Welcome to Crown Field</div>
-<h2>Raised with care. Ready for a lifetime of companionship.</h2>
-<p>We believe every puppy deserves a thoughtful start and a loving, prepared home. Our goal is to help families understand this energetic, affectionate, intelligent breed before welcoming a puppy.</p>
+
+<h2>
+Raised with care. Ready for a lifetime of companionship.
+</h2>
+
+<p>
+We believe every puppy deserves a thoughtful start and a loving, prepared home. Our goal is to help families understand this energetic, affectionate, intelligent breed before welcoming a puppy.
+</p>
+
 <ul>
 <li>Friendly, people-oriented companions</li>
 <li>Curious, bright, and eager to learn</li>
 <li>Best suited to active homes and daily enrichment</li>
 </ul>
+
 </div>
 </div>
 </section>
 
+<!-- AVAILABLE PUPPIES -->
+
 <section class="alt" id="puppies">
+
 <div class="wrap">
+
 <div class="heading">
+
 <div class="eyebrow">Current availability</div>
+
 <h2>Available Puppies</h2>
-<p>Meet our current litter. Puppy details shown below: 10 weeks old · $750 each.</p>
+
+<p>
+Meet our current litter. Puppies are listed as 10 weeks old and $750 each.
+Contact us to confirm availability.
+</p>
+
 </div>
 
 <div class="cards">
 
+<!-- HUNTER -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/hunter.jpg" alt="Hunter, male German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/hunter.jpg"
+alt="Hunter, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Hunter</h3>
-<div class="tags"><span>Male</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Male</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Hunter is an observant, curious puppy who enjoys exploring his surroundings. His bright, attentive nature makes him a lovely candidate for positive training, outdoor enrichment, and close family companionship.</p>
-<a class="textlink" href="#contact">Ask about Hunter</a>
+
+<p>
+Hunter is an observant, curious puppy who enjoys exploring his surroundings. His bright, attentive nature makes him a lovely candidate for positive training, outdoor enrichment, and close family companionship.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Hunter&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Hunter.%0A%0APuppy%3A%20Hunter%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- GREG -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/greg.jpg" alt="Greg, male German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/greg.jpg"
+alt="Greg, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Greg</h3>
-<div class="tags"><span>Male</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Male</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Greg has a thoughtful, inquisitive look and a playful puppy spirit. He can enjoy gentle games, new experiences, and learning through patient, reward-based training.</p>
-<a class="textlink" href="#contact">Ask about Greg</a>
+
+<p>
+Greg has a thoughtful, inquisitive look and a playful puppy spirit. He can enjoy gentle games, new experiences, and learning through patient, reward-based training.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Greg&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Greg.%0A%0APuppy%3A%20Greg%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- KLISSIT -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/klissit.jpg" alt="Klissit, male German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/klissit.jpg"
+alt="Klissit, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Klissit</h3>
-<div class="tags"><span>Male</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Male</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Klissit is an alert little adventurer with a striking coat and a curious personality. He will benefit from regular play, socialization, and plenty of opportunities to explore safely.</p>
-<a class="textlink" href="#contact">Ask about Klissit</a>
+
+<p>
+Klissit is an alert little adventurer with a striking coat and a curious personality. He will benefit from regular play, socialization, and plenty of opportunities to explore safely.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Klissit&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Klissit.%0A%0APuppy%3A%20Klissit%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- YOBA -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/yoba.jpg" alt="Yoba, male German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/yoba.jpg"
+alt="Yoba, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Yoba</h3>
-<div class="tags"><span>Male</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Male</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Yoba looks ready to investigate every new scent and sound. With an active routine, kind guidance, and positive training, he can grow into a devoted companion.</p>
-<a class="textlink" href="#contact">Ask about Yoba</a>
+
+<p>
+Yoba looks ready to investigate every new scent and sound. With an active routine, kind guidance, and positive training, he can grow into a devoted companion.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Yoba&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Yoba.%0A%0APuppy%3A%20Yoba%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- TOLLO -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/tollo.jpg" alt="Tollo, male German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/tollo.jpg"
+alt="Tollo, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Tollo</h3>
-<div class="tags"><span>Male</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Male</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Tollo has a handsome solid-brown coat and a calm, attentive expression. He’ll enjoy companionship, age-appropriate activity, and a family ready to nurture his development.</p>
-<a class="textlink" href="#contact">Ask about Tollo</a>
+
+<p>
+Tollo has a handsome solid-brown coat and a calm, attentive expression. He’ll enjoy companionship, age-appropriate activity, and a family ready to nurture his development.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Tollo&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Tollo.%0A%0APuppy%3A%20Tollo%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- LIZ -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/liz.jpg" alt="Liz, female German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/liz.jpg"
+alt="Liz, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Liz</h3>
-<div class="tags"><span>Female</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Female</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Liz is pictured relaxing beside her plush companion. She has a sweet, attentive look and will benefit from gentle handling, playful enrichment, and a reassuring daily routine.</p>
-<a class="textlink" href="#contact">Ask about Liz</a>
+
+<p>
+Liz is pictured relaxing beside her plush companion. She has a sweet, attentive look and will benefit from gentle handling, playful enrichment, and a reassuring daily routine.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Liz&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Liz.%0A%0APuppy%3A%20Liz%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- LUCY -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/lucy.jpg" alt="Lucy, female German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/lucy.jpg"
+alt="Lucy, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Lucy</h3>
-<div class="tags"><span>Female</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Female</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Lucy is an expressive, curious puppy who enjoys sitting outdoors and taking in her surroundings. She’ll thrive with patient training, safe exploration, and family interaction.</p>
-<a class="textlink" href="#contact">Ask about Lucy</a>
+
+<p>
+Lucy is an expressive, curious puppy who enjoys sitting outdoors and taking in her surroundings. She’ll thrive with patient training, safe exploration, and family interaction.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Lucy&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Lucy.%0A%0APuppy%3A%20Lucy%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- ASHLEY -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/ashley.jpg" alt="Ashley, female German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/ashley.jpg"
+alt="Ashley, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Ashley</h3>
-<div class="tags"><span>Female</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Female</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Ashley has a bright, inquisitive expression and a lovely speckled coat. She’ll enjoy positive training, play, and opportunities to build confidence as she grows.</p>
-<a class="textlink" href="#contact">Ask about Ashley</a>
+
+<p>
+Ashley has a bright, inquisitive expression and a lovely speckled coat. She’ll enjoy positive training, play, and opportunities to build confidence as she grows.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Ashley&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Ashley.%0A%0APuppy%3A%20Ashley%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
+<!-- GISEL -->
+
 <article class="card">
-<div class="puppy-photo"><img src="images/gisel.jpg" alt="Gisel, female German Shorthaired Pointer puppy" loading="lazy"></div>
+
+<div class="puppy-photo">
+<img src="images/gisel.jpg"
+alt="Gisel, German Shorthaired Pointer puppy"
+loading="lazy">
+</div>
+
 <div class="card-body">
+
 <h3>Gisel</h3>
-<div class="tags"><span>Female</span><span>10 weeks old</span></div>
+
+<div class="tags">
+<span>Female</span>
+<span>10 weeks old</span>
+</div>
+
 <div class="price">$750</div>
-<p>Gisel is a striking black-and-white puppy with an attentive, gentle expression. She’ll benefit from loving companionship, age-appropriate activity, and consistent positive guidance.</p>
-<a class="textlink" href="#contact">Ask about Gisel</a>
+
+<p>
+Gisel is a striking black-and-white puppy with an attentive, gentle expression. She’ll benefit from loving companionship, age-appropriate activity, and consistent positive guidance.
+</p>
+
+<a class="checkout" href="mailto:crownfieldgsp@yahoo.com?subject=Inquiry%20about%20Gisel&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20Gisel.%0A%0APuppy%3A%20Gisel%0APrice%3A%20%24750%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+Inquire / Checkout by Email
+</a>
+
 </div>
 </article>
 
@@ -261,121 +853,219 @@ section{padding:48px 16px}
 </div>
 </section>
 
+<!-- PARENTS -->
+
 <section id="parents">
+
 <div class="wrap">
+
 <div class="heading">
+
 <div class="eyebrow">Meet the parents</div>
+
 <h2>Dax &amp; July</h2>
-<p>Meet the breeding parents of our current litter.</p>
+
+<p>
+Meet the breeding parents of our current litter.
+</p>
+
 </div>
 
 <div class="parent-gallery">
-<img src="images/parents-dax-july-1.jpg" alt="Dax and July sitting together outdoors" loading="lazy">
-<img src="images/parents-dax-july-2.jpg" alt="Dax and July sitting together in the yard" loading="lazy">
+
+<img
+src="images/parents-dax-july-1.jpg"
+alt="Dax and July sitting together outdoors"
+loading="lazy">
+
+<img
+src="images/parents-dax-july-2.jpg"
+alt="Dax and July sitting together in the yard"
+loading="lazy">
+
 </div>
 
-<p style="text-align:center;color:var(--muted);margin-top:18px"><strong>Father:</strong> Dax &nbsp; · &nbsp; <strong>Mother:</strong> July</p>
+<p style="text-align:center;color:var(--muted);margin-top:18px">
+<strong>Father:</strong> Dax &nbsp; · &nbsp;
+<strong>Mother:</strong> July
+</p>
+
 </div>
 </section>
+
+<!-- BREED INFORMATION -->
 
 <section class="alt" id="breed">
+
 <div class="wrap">
+
 <div class="heading">
+
 <div class="eyebrow">Know the breed</div>
+
 <h2>German Shorthaired Pointer Traits</h2>
-<p>Important things to know before bringing a GSP home.</p>
+
+<p>
+Important things to know before bringing a GSP home.
+</p>
+
 </div>
 
 <div class="trio">
+
 <div class="tile">
 <h3>Active &amp; Athletic</h3>
-<p>GSPs are energetic sporting dogs that need daily exercise, outdoor activities, and mental stimulation.</p>
+<p>
+GSPs are energetic sporting dogs that need daily exercise, outdoor activities, and mental stimulation.
+</p>
 </div>
+
 <div class="tile">
 <h3>Intelligent &amp; Trainable</h3>
-<p>They often learn quickly and respond well to consistent, reward-based training and clear routines.</p>
+<p>
+They often learn quickly and respond well to consistent, reward-based training and clear routines.
+</p>
 </div>
+
 <div class="tile">
 <h3>People-Oriented</h3>
-<p>Many GSPs enjoy being close to their people and do best when included in family life.</p>
+<p>
+Many GSPs enjoy being close to their people and do best when included in family life.
+</p>
 </div>
+
 </div>
 </div>
 </section>
 
+<!-- OWNERSHIP -->
+
 <section id="ownership">
+
 <div class="wrap">
+
 <div class="heading">
+
 <div class="eyebrow">A thoughtful start</div>
+
 <h2>Preparing for Puppy Ownership</h2>
-<p>Welcoming a puppy is a long-term commitment. Prepare for the needs of an active sporting breed.</p>
+
+<p>
+Welcoming a puppy is a long-term commitment. Prepare for the needs of an active sporting breed.
+</p>
+
 </div>
 
 <div class="trio">
+
 <div class="tile">
 <h3>Home &amp; Routine</h3>
-<p>Prepare a safe space, establish a predictable schedule, and plan for supervision, rest, and potty breaks.</p>
+<p>
+Prepare a safe space, establish a predictable schedule, and plan for supervision, rest, and potty breaks.
+</p>
 </div>
+
 <div class="tile">
 <h3>Veterinary Care</h3>
-<p>Arrange a veterinary visit and discuss vaccinations, parasite prevention, nutrition, and preventive care.</p>
+<p>
+Arrange a veterinary visit and discuss vaccinations, parasite prevention, nutrition, and preventive care.
+</p>
 </div>
+
 <div class="tile">
 <h3>Training &amp; Enrichment</h3>
-<p>Use gentle, reward-based training, age-appropriate play, sniffing games, and safe socialization.</p>
+<p>
+Use gentle, reward-based training, age-appropriate play, sniffing games, and safe socialization.
+</p>
 </div>
+
 </div>
 </div>
 </section>
 
-<!-- NEW TESTIMONIALS SECTION -->
+<!-- TESTIMONIALS -->
+
 <section class="alt" id="testimonials">
+
 <div class="wrap">
 
 <div class="heading">
+
 <div class="eyebrow">Happy families</div>
+
 <h2>Testimonials</h2>
-<p>Experiences shared by families welcoming a German Shorthaired Pointer into their homes.</p>
+
+<p>
+Experiences shared by families welcoming a German Shorthaired Pointer into their homes.
+</p>
+
 </div>
 
 <div class="quotes">
 
 <blockquote>
-<p>“Our experience with Crown Field GSP was wonderful. We appreciated the communication and information provided about the breed. We are excited to begin this new chapter with our puppy.”</p>
+
+<p>
+“Our experience with Crown Field GSP was wonderful. We appreciated the communication and information provided about the breed. We are excited to begin this new chapter with our puppy.”
+</p>
+
 <footer>— Happy Puppy Family</footer>
+
 </blockquote>
 
 <blockquote>
-<p>“We love our German Shorthaired Pointer! Such a beautiful, intelligent, and playful companion. Bringing our puppy home has been an exciting experience for our family.”</p>
+
+<p>
+“We love our German Shorthaired Pointer! Such a beautiful, intelligent, and playful companion. Bringing our puppy home has been an exciting experience for our family.”
+</p>
+
 <footer>— GSP Puppy Owner</footer>
+
 </blockquote>
 
 <blockquote>
-<p>“We were looking for an active and affectionate family companion. Our puppy has brought so much joy into our home, and we look forward to many adventures together.”</p>
+
+<p>
+“We were looking for an active and affectionate family companion. Our puppy has brought so much joy into our home, and we look forward to many adventures together.”
+</p>
+
 <footer>— Crown Field GSP Family</footer>
+
 </blockquote>
 
 </div>
 </div>
 </section>
 
-<!-- UPDATED CONTACT AND CHECKOUT -->
+<!-- CONTACT -->
+
 <section id="contact">
+
 <div class="wrap">
+
 <div class="contact">
 
 <div class="eyebrow">Let's talk</div>
+
 <h2>Interested in a Crown Field GSP puppy?</h2>
 
-<p>Reach out with questions about the puppies, breed traits, preparation, and responsible placement.</p>
+<p>
+Reach out with questions about the puppies, breed traits, preparation, and responsible placement.
+</p>
 
 <a class="btn"
-href="sms:+19375185268?body=Hello%20Crown%20Field%20GSP%2C%20I%20am%20interested%20in%20a%20puppy.">
-Text About Puppies &amp; Checkout
+href="mailto:crownfieldgsp@yahoo.com?subject=Crown%20Field%20GSP%20Puppy%20Inquiry&body=Hello%20Crown%20Field%20GSP%2C%0A%0AI%20am%20interested%20in%20your%20German%20Shorthaired%20Pointer%20puppies.%0A%0APlease%20send%20me%20more%20information.%0A%0AThank%20you.">
+
+Email Us About Puppies
 </a>
 
-<p style="font-size:12px">Phone: +1 (937) 518-5268</p>
-<p style="font-size:12px">Email: crownfieldgsp@yahoo.com</p>
+<p style="font-size:13px">
+Email: crownfieldgsp@yahoo.com
+</p>
+
+<p style="font-size:12px">
+Please include the puppy's name in your inquiry.
+</p>
 
 </div>
 </div>
@@ -384,18 +1074,70 @@ Text About Puppies &amp; Checkout
 </main>
 
 <footer class="site-footer">
-© <span id="year"></span> Crown Field GSP. All rights reserved.<br>
+
+© <span id="year"></span> Crown Field GSP. All rights reserved.
+
+<br>
+
 German Shorthaired Pointers · Careful planning · Lifelong companionship
+
 </footer>
 
 <script>
-function closeMenu(){
-document.querySelector('nav').classList.remove('show')
-}
 
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));
+/* MOBILE MENU */
 
-document.getElementById('year').textContent=new Date().getFullYear();
+const menuButton = document.querySelector('.menu');
+const navigation = document.querySelector('nav');
+
+menuButton.addEventListener('click', function(){
+  navigation.classList.toggle('show');
+});
+
+document.querySelectorAll('nav a').forEach(function(link){
+  link.addEventListener('click', function(){
+    navigation.classList.remove('show');
+  });
+});
+
+/* AUTOMATIC COPYRIGHT YEAR */
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+/* IMAGE ERROR HANDLING */
+
+document.querySelectorAll('img').forEach(function(img){
+
+  img.addEventListener('error', function(){
+
+    if(img.dataset.fallbackShown === 'true'){
+      img.style.display = 'none';
+
+      const fallback = document.createElement('div');
+
+      fallback.className = 'image-fallback';
+
+      fallback.style.display = 'flex';
+
+      fallback.textContent =
+        'Image unavailable — check the filename and images folder.';
+
+      img.parentElement.appendChild(fallback);
+
+      return;
+    }
+
+    img.dataset.fallbackShown = 'true';
+
+    const filename = img.src.split('/').pop();
+
+    img.src = '/images/' + filename;
+
+  });
+
+});
+
 </script>
 
 </body>
